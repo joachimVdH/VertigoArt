@@ -1,0 +1,82 @@
+$pesticide-debug: false;
+@import "pesticide";
+
+@import "normalize";
+/* @import "compass/css3/shared"; */
+/* @import "compass/css3/text-shadow"; */
+
+$leftColumnWith:5%;
+
+$colorBackground:white;
+$colorVertigoBack: #7EBBE1 ;
+
+$sizeSmartPhone:25em; 		// 400px
+$sizeSmallScreen:43.5em; 	// 696px
+$sizeNormalScreen:47em;		// 752px
+$sizeBigScreen:51.25;			// 820px
+
+$fontHeader:Helvetica,sans-serif;
+$fontBody: Georgia,serif;
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+html{
+  overflow-y: scroll;
+  text-size-adjust: 100%;
+}
+
+body{
+  background-color: $colorBackground;  
+  font-family: $fontBody;
+}
+
+mobileonly{
+	display: none;
+}
+
+header{	
+	margin-top: 4em;
+	height: 2em;
+	text-align: center;
+	background-color: $colorVertigoBack;
+	font-size: 4em;
+}
+
+
+img{
+	border: none;
+	max-width: 100%;
+}
+
+article{
+}
+
+footer{
+}
+
+@media only screen and (max-width: $sizeSmartPhone) {
+	mobileonly{
+		height: 1.7em;
+		display: block;
+		font-size: 1.0em;
+		font-weight: 300;
+		background-color: $colorVertigoBack;
+		text-align: center;
+
+		a{
+			text-decoration: none;
+			color: white;
+			border: 1px solid white;	
+			padding-left: 0.3em;
+			padding-right: 0.3em;
+			padding-bottom: 0.1em;
+			margin-left: 0.2em;
+	  }
+  }
+} 
+
