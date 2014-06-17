@@ -7,8 +7,9 @@ $pesticide-debug: false;
 
 $leftColumnWith:5%;
 
-$colorBackground:white;
-$colorVertigoBack: #7EBBE1 ;
+$colorBackground:#FAFAFA;
+$colorVertigoBack:#84BAE5 ;
+$colorFontText:#222222;
 
 $sizeSmartPhone:25em; 		// 400px
 $sizeSmallScreen:43.5em; 	// 696px
@@ -16,7 +17,7 @@ $sizeNormalScreen:47em;		// 752px
 $sizeBigScreen:51.25;			// 820px
 
 $fontHeader:Helvetica,sans-serif;
-$fontBody: Georgia,serif;
+$fontBody: Helvetica,sans-serif;
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -33,6 +34,8 @@ html{
 body{
   background-color: $colorBackground;  
   font-family: $fontBody;
+  color: $colorFontText;
+	font-size: 1em;
 }
 
 mobileonly{
@@ -40,23 +43,65 @@ mobileonly{
 }
 
 header{	
-	margin-top: 4em;
-	height: 2em;
+	font-size: 4em;
+	height: 2.3em;
 	text-align: center;
 	background-color: $colorVertigoBack;
-	font-size: 4em;
+	svg {
+		padding-top: 0.4em;
+		padding-left: 0.4em;
+		padding-right: 0.4em;
+		height:3em;
+		color: $colorBackground;
+	}
+}
+section{
+	padding: 2em;
+	> header {
+		background-color: $colorBackground;
+		color: $colorVertigoBack;
+		text-align: left;
+		font-size: 2em;
+		height: 1.5em;
+	}
 }
 
+#current{
+	
+}
+
+#news{
+	
+}
+
+#contact{
+	
+}
+
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+nav{
+	margin-top: 4em;
+	padding: 0.2em;
+	text-align: center;
+}
 
 img{
 	border: none;
 	max-width: 100%;
 }
 
-article{
-}
-
-footer{
+iframe{ // gmap
+	margin: 0em;
+	height: 400px;
+	@media only screen AND (max-width: $sizeSmartPhone) {
+		height: 8em;
+	}	
 }
 
 @media only screen and (max-width: $sizeSmartPhone) {
