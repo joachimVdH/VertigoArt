@@ -4,6 +4,7 @@ $pesticide-debug: false;
 @import "normalize";
 /* @import "compass/css3/shared"; */
 /* @import "compass/css3/text-shadow"; */
+@import "slick";
 
 $leftColumnWith:5%;
 
@@ -75,7 +76,11 @@ section{
 }
 
 #contact{
-	
+	img{
+		float:left;
+		padding-right: 1em;
+		padding-bottom: 0.5em;
+	}
 }
 
 a{
