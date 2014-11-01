@@ -17,8 +17,8 @@ $sizeSmallScreen:43.5em; 	// 696px
 $sizeNormalScreen:47em;		// 752px
 $sizeBigScreen:51.25;			// 820px
 
-$fontHeader:Helvetica,sans-serif;
-$fontBody: Helvetica,sans-serif;
+$fontHeader:'Open Sans',Helvetica,sans-serif;
+$fontBody: 'Open Sans',Helvetica,sans-serif;
 
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
@@ -44,16 +44,32 @@ mobileonly{
 }
 
 header{	
-	font-size: 4em;
-	height: 2.3em;
-	text-align: center;
+	//font-size: 6em;
+	// font-weight: 700;
+	//height: 2.3em;
+	// text-align: center;
 	background-color: $colorVertigoBack;
 	svg {
-		padding-top: 0.4em;
-		padding-left: 0.4em;
-		padding-right: 0.4em;
-		height:3em;
-		color: $colorBackground;
+		margin-left : 1em;
+		margin-right : 1em;
+		margin-top: 1em;
+		@media only screen AND (max-width: $sizeSmartPhone) {
+			margin-bottom: -2.1em;
+		}
+		@media only screen  AND (min-width: $sizeSmartPhone) AND (max-width: 720px) {
+			margin-bottom: -3em;
+		}
+		@media only screen  AND (min-width: 721px) AND (max-width: 1130px) {
+			margin-bottom: -6em;
+		}
+		@media only screen AND (min-width: 1130px) {
+			margin-bottom: -9.5em;
+		}
+		// padding-top: 0.4em;
+		// padding-left: 0.4em;
+		// padding-right: 0.4em;
+		// height:3em;
+		// color: $colorBackground;
 	}
 }
 section{
@@ -91,9 +107,24 @@ a:hover{
 }
 
 nav{
-	margin-top: 4em;
-	padding: 0.2em;
+	@media only screen AND (max-width: 720px) {
+		text-align: center;
+		margin-top: 2.5em;
+		margin-left: 0em;
+		margin-bottom: 0em;
+		font-size: 1.0em;
+	}
+	@media only screen AND (min-width: 721px) {
+	font-size: 1.4em;
+	margin-left: 16em;
+	margin-top: 3em;
+	margin-bottom: 2em;
+	// padding: 0.2em;
 	text-align: center;
+	}
+	a{
+		padding: 0em 0.5em 0em 0.5em;
+	}
 }
 
 img{
