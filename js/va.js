@@ -177,8 +177,27 @@ window.matchMedia||(window.matchMedia=function(){"use strict";var a=window.style
 
 // check that everything is loaded
 $(document).ready(function() {
+	
+	// $("#mailNL").click(function() {
+	// 	// $("#mc-embedded-subscribe-form").toggle();
+	// 	// $("mce-EMAIL").show();
+	// 	 alert("mailNL clicked");
+	// 	
+	// });
+	// 
+	// $( "#mailFR" ).click(function() {
+	// 	$("#mc-embedded-subscribe-form").toggle();
+	// 	
+	// });
+	// 
+	// $( "#mailEN" ).click(function() {
+	// 	$("#mc-embedded-subscribe-form").toggle();
+	// 	
+	// });
+	
+	
 	// config the flickr js
-	var config = {}	      
+	var config = {}	;      
 	// $('#art').flickr(config).photosetsGetPhotos({photoset_id: '72157645000386054'})
 	// $('#art').flickr(config).photosetsGetPhotos({photoset_id: '72157647311421128'})	;
 	
@@ -220,6 +239,10 @@ $(document).ready(function() {
 			// 	}
 			// ]
 		});
+
+	// $("#mc-embedded-subscribe-form").toggle();
+
+	// $("#mc-embedded-subscribe-form").hide();
 	
-})
+});
 
